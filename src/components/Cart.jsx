@@ -6,7 +6,7 @@ import CartItem from "./CartItem";
 import Checkout from "./Checkout";
 
 const CartBody = () => {
-    const { cart, removeItem, clearCart } = CartProvider();
+    const { cart, clearCart } = CartProvider();
 
     return (
         <div className="container">
