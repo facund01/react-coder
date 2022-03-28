@@ -20,7 +20,7 @@ const CartBody = () => {
                     <div className="row">
                         <div className="container col-12 col-md-6 my-4 py-2 container-scroll">
                             {cart.map((item, index) => (
-                                <CartItem key={index} item={item}/>
+                                <CartItem key={index} item={item} quitar={removeItem}/>
                             ))}
                         </div>
                         <div className="col col-12 col-md-6 py-2 my-4">

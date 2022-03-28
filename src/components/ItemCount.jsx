@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { CartProvider } from '../context/CartContext';
 import { verificaSiExisteEnCarrito } from '../helpers/index';
@@ -44,7 +44,7 @@ const ItemCount = ({ initial, stock, item }) => {
                         <div className='col-4 d-flex justify-content-center'>
                             <button className='btn btn-success mx-3' onClick={onAdd} disabled={count === stock ? true : false}>+</button>
                         </div>
-                        <button className='btn btn-dark w-75 mx-auto my-3' onClick={() => onAddItem()}>Agregar al carrito</button>
+                        <button className='btn btn-dark w-75 mx-auto my-3' onClick={() => onAddItem(producto)}>Agregar al carrito</button>
                     </div>
                 ) : (
                     <Link to={'/cart'} className='container btn btn-outline-primary rounded'>

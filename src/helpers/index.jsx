@@ -22,5 +22,5 @@ export const unificarItems = (cart, item) => {
 
 
 export const validarTodoLLeno = (campos) => {
-    return campos.some((campo) => campo === "");
+    return campos.some((campo) => campo === '');
 };

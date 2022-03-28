@@ -24,11 +24,11 @@ const Input = ({
                 value={value}
                 onChange={onChange}
                 onBlur={(e) => onBlur(e)}
-                className={inputClassName} //{`form-control ${error.nombre && "is-invalid"}`}
+                className={inputClassName}
                 placeholder={placeholder}
             />
             {error.nombre && (
-                <h6 className="text-danger my-2 text-uppercase">{error.nombre}</h6>
+                <h6 className="text-danger my-2">{error.nombre}</h6>
             )}
         </div>
     );
@@ -88,7 +88,7 @@ const Checkout = ({ total, compra }) => {
     const handleBlur = (e) => {
         const { value, name } = e.target;
         if (value === '') {
-            setError({ ...error, [name]: "Este campo es obligatorio" });
+            setError({ ...error, [name]: "Campo obligatorio *" });
             return;
         };
         setError({});
