@@ -66,8 +66,8 @@ const Checkout = ({ total, compra }) => {
             return;
         }
         Swal.fire({
-            title: "Genial!",
-            text: "Su orden de compra se genero correctamente!",
+            title: "Felicitaciones!",
+            text: "Su orden de compra se generó correctamente",
             icon: "success",
         });
         generateOrder({ datos: formulario });
@@ -95,7 +95,7 @@ const Checkout = ({ total, compra }) => {
     };
 
     return (
-        <form onSubmit={onSubmit} className="container border">
+        <form onSubmit={onSubmit} className="container border border-dark rounded">
             <h3 className="my-4">Datos del comprador</h3>
             {Object.keys(formulario.buyer).map((key, index) => (
                 <Input
@@ -111,9 +111,9 @@ const Checkout = ({ total, compra }) => {
                     error={error}
                 />
             ))}
-            <div className="border row d-flex px-2">
+            <div className="border rounded row d-flex px-2">
                 <div className="col-12 col-lg-9">
-                    <p className="fs-4 text-uppercase">total</p>
+                    <p className="fs-4">Total</p>
                 </div>
                 <div className="col-12 col-lg-3">
                     <p className="fs-4">${total}</p>
