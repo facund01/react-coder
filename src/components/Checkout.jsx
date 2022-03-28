@@ -64,7 +64,7 @@ const Checkout = ({ total, compra }) => {
                 icon: "error",
             });
             return;
-        }
+        };
         Swal.fire({
             title: "Felicitaciones!",
             text: "Su orden de compra se generó correctamente",
@@ -116,16 +116,13 @@ const Checkout = ({ total, compra }) => {
                     <p className="fs-4">Total</p>
                 </div>
                 <div className="col-12 col-lg-3">
-                    <p className="fs-4">${total}</p>
+                    <p className="fs-4">US${total}</p>
                 </div>
                 <button type="submit" className="btn btn-primary w-100 my-4">
                     Terminar la compra
                 </button>
             </div>
-
-            <Link to="/" className="btn btn-secondary my-2 w-100">
-                Volver a comprar
-            </Link>
+            <Link to="/" className="btn btn-secondary my-2 w-100">Volver al inicio</Link>
         </form>
     );
 };

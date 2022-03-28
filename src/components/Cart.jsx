@@ -10,9 +10,9 @@ const CartBody = () => {
 
     return (
         <div className="container">
-            <div className={`${cart.length > 0 && " d-flex justify-content-between aling-items-center"} px-4`}>
+            <div className={`${cart.length > 0 && "text-center"}`}>
                 <h1 className="text-center my-5">Checkout</h1>
-                {cart.length > 0 && <i onClick={() => clearCart()} className="fas fa-trash-alt pointer btn my-5 fs-3 text-danger text-center"></i>}
+                {cart.length > 0 && <i onClick={() => clearCart()} className="fas fa-trash-alt pointer btn fs-3 text-danger"></i>}
             </div>
 
             {cart.length > 0 && (
@@ -20,7 +20,7 @@ const CartBody = () => {
                     <div className="row">
                         <div className="container col-12 col-md-6 my-4 py-2 container-scroll">
                             {cart.map((item, index) => (
-                                <CartItem key={index} item={item} quitar={removeItem}/>
+                                <CartItem key={index} item={item} />
                             ))}
                         </div>
                         <div className="col col-12 col-md-6 py-2 my-4">
@@ -34,9 +34,7 @@ const CartBody = () => {
                     <div>
                         <h3 className="text-center">El carrito está vacío</h3>
                         <div className="my-5 d-flex">
-                            <Link to="/" className="btn btn-primary w-100">
-                                Volver al inicio
-                            </Link>
+                            <Link to="/" className="btn btn-primary w-100">Volver al inicio</Link>
                         </div>
                     </div>
                 </div>

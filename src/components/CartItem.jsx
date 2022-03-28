@@ -1,7 +1,7 @@
 import React from 'react';
 import { CartProvider } from '../context/CartContext';
 
-const CartItem = ({ item, id, cantidad }) => {
+const CartItem = ({ item }) => {
 
     const { removeItem } = CartProvider();
 
@@ -15,14 +15,14 @@ const CartItem = ({ item, id, cantidad }) => {
                     <div className="card-body">
                         <h5 className="card-title">{item.name}</h5>
                         <div className="row my-2 border rounded">
-                            <div className="col-10">Cantidad</div>
-                            <div className="col-2">{cantidad}</div>
+                            <div className="col-7">Cantidad</div>
+                            <div className="col-5">{item.count}</div>
                         </div>
                         <div className="row my-2 border rounded">
                             <div className="col-7">Precio</div>
                             <div className="col-5">US$ {item.price}</div>
                         </div>
-                        <button onClick={() => removeItem(id)} className="btn btn-danger mt-2 w-100">
+                        <button onClick={() => removeItem(item.id)} className="btn btn-danger mt-2 w-100">
                             <i className="fas fa-trash-alt mx-3"></i>
                             Eliminar
                         </button>
